@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900">
+    <main class="mx-auto flex min-h-screen w-full max-w-2xl flex-col px-4 py-10">
+      <section class="rounded-2xl bg-white p-6 shadow-sm">
+        <header class="mb-6">
+          <h1 class="text-3xl font-bold tracking-tight">Todo App</h1>
+          <p class="mt-2 text-sm text-slate-500">
+            Add tasks and track your progress.
+          </p>
+        </header>
+
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <label for="todo-input" class="sr-only">Todo</label>
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="Enter a todo"
+            class="min-h-12 flex-1 rounded-lg border border-slate-300 px-4 text-base outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          />
+          <button
+            id="add-btn"
+            type="button"
+            class="min-h-12 rounded-lg bg-blue-600 px-5 font-semibold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          >
+            Add
+          </button>
+        </div>
+
+        <section class="mt-6">
+          <h2 class="mb-3 text-lg font-semibold">Todo List</h2>
+          <ul
+            id="todo-list"
+            class="min-h-32 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4"
+            aria-live="polite"
+          >
+            <li class="text-sm text-slate-400">No todos yet.</li>
+          </ul>
+        </section>
+
+        <section
+          id="todo-summary"
+          class="mt-6 rounded-lg bg-slate-100 p-4 text-sm text-slate-600"
+        >
+          Total: 0 | Completed: 0 | Remaining: 0
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
